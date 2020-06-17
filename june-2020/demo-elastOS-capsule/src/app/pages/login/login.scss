@@ -1,0 +1,113 @@
+ion-content {
+    --background: white;
+    .page {
+      background: transparent;
+      height: 100%;
+      margin: 0;
+      text-align: center;
+      padding-top: 213px;
+    }
+    .page-background-top {
+      object-fit: contain;
+      display: flex;
+      position: absolute;
+      background-image: url('../../../assets/images/topLoginBg.svg');
+      background-size: contain;
+      background-repeat: no-repeat no-repeat;
+      height: 285px;
+      top: 0;
+      left: 0;
+      width: 376px;
+    }
+  
+    .page-background-bottom {
+      object-fit: fill;
+      display: flex;
+      position: absolute;
+      background-image: url('../../../assets/images/bottomLoginBG.svg');
+      background-size: cover;
+      background-repeat: no-repeat no-repeat;
+      height: 300px;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+    }
+  
+    .page-title {
+      display: block;
+      font-family: Poppins;
+      font-size: 49px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.49;
+      letter-spacing: normal;
+      color: #262626;
+    }
+  
+    .page-subtitle {
+      display: block;
+      font-family: Muli;
+      font-size: 19px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.26;
+      letter-spacing: normal;
+      color: #8493a8;
+    }
+    img {
+      text-align: center;
+      margin-top: 5px;
+      margin-left: 45px;
+    }
+  
+    .page-button {
+      overflow: hidden;
+      position: relative;
+      background-image: linear-gradient(103deg, #6fa8ff 7%, #7e9eff 94%);
+      box-shadow: 0 3px 10px 0 rgba(125, 158, 255, 0.25);
+      color: white;
+      border-width: 0px;
+      border-style: none;
+      font-weight: bold;
+      font-size: 13px;
+      height: 39px;
+      width: 197px;
+      border-radius: 15px;
+      padding: 12px;
+      text-align: center;
+      margin-top: 22px;
+      margin-left: 120px;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      z-index: 1;
+    }
+  
+    .page-terms {
+      margin-top: 12px;
+      margin-left: 35px;
+      font-family: Muli;
+      font-size: 8px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      text-align: center;
+      color: #8493a8;
+    }
+    .page-terms a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+  
+    .page-button img {
+      margin-left: 33px;
+    }
+    .page-button-text {
+      margin-left: 3px;
+    }
+  }
+  

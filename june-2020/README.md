@@ -4,4 +4,4 @@
 
 - [Demo - elastOS Capsule DID Login](./demo-elastOS-capsule)
 - [Demo - Traditional Website DID Login](./demo-website)
-- [Demo - Native App DID Login](./demo-android-app)
+- [Demo - Ionic App DID Login](./demo-android-app)

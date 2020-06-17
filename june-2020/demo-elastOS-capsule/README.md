@@ -8,4 +8,8 @@
 npm install -g @elastosfoundation/trinity-cli;
 npm install
 ```
+- Run
+```
+trinity-cli run -p android
+```
 

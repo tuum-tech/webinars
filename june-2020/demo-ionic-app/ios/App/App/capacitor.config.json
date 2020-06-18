@@ -1,0 +1,13 @@
+{
+  "appId": "tech.tuum.demoapp",
+  "appName": "demo-ionic-app",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

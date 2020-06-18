@@ -16,7 +16,8 @@ ionic capacitor run android --livereload --external
 
 ## If there are any changes to the code
 ```
-ionic cap copy // If only web code has changed
-ionic cap sync // If you made changes to plugins
+ionic cap update android 
+ionic cap copy android // If only web code has changed
+ionic cap sync android // If you made changes to plugins
 ```
 

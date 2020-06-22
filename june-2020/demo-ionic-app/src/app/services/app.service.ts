@@ -1,9 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Native } from './Native';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { JwtHelperService } from "@auth0/angular-jwt";
 import { LocalStorageService } from "./localstorage.service";
+import { Platform } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { Plugins, AppUrlOpen } from '@capacitor/core';
+import * as jwt from 'jsonwebtoken';
 let myService = null;
 
+const helper = new JwtHelperService();
 
 @Injectable({
     providedIn: 'root'
@@ -16,12 +22,41 @@ export class AppService {
     private isReceiveIntentReady = false;
 
 
-    constructor(public native: Native, private http: HttpClient, private localStorage : LocalStorageService) {
-
+    constructor(public native: Native, private http: HttpClient, private localStorage : LocalStorageService, private platform: Platform, public router: Router) {
         myService = this;
     }
 
     init() {
+        this.platform.ready().then(() => {
+            if (this.platform.is('capacitor')) {
+              Plugins.SplashScreen.hide();
+      
+              // THIS WILL BE USED IF THE APP IS ALREADY OPEN:
+              Plugins.App.addListener('appUrlOpen', (urlOpen: AppUrlOpen) => {
+                console.log('App URL Open', urlOpen);
+                this.navigate(urlOpen.url);
+              });
+            }
+      
+            // THIS WILL BE USED IF THE APP HAS BEEN KILLED AND RE-OPENED:
+            this.getLaunchUrl();
+          });
+    }
+
+    async getLaunchUrl() {
+        const urlOpen = await Plugins.App.getLaunchUrl();
+        if(!urlOpen || !urlOpen.url) return;
+        console.log('Launch URL', urlOpen);
+        this.navigate(urlOpen.url);
+    }
+
+    navigate(uri: string) {
+        // THIS MUST EQUAL THE 'custom_url_scheme' from your Android intent:
+        //if (!uri.startsWith('net.exampleapp.app:/')) return;
+        // Strip off the custom scheme:
+        //uri = uri.substring(19);
+        console.log("navigate: uri: ", uri);
+        this.router.navigateByUrl(uri);
     }
 
     tryDoLogin(): Promise<boolean> {
@@ -47,6 +82,23 @@ export class AppService {
             this.localStorage.setProfile(AppService.login,  AppService.email);
             
             //did:elastos:iWm3fwhsVbXJ1ecSi7n7Q9L6qNmH14FsuN
+            // Create jwt token
+            let jwt_claims = {
+                'exp': 300,
+                'redirecturl': "",
+                'claims': {
+                    'name': true,
+                    'email': true
+                }
+            }
+            let jwt_token = jwt.sign(jwt_claims, "demo-ionic-app");
+            console.log("jwt_token:", jwt_token);
+            let urlToOpen = "elastos://credaccess/" + jwt_token;
+            this.navigate(urlToOpen);
+            let decoded = helper.decodeToken(jwt_token);
+            console.log("decoded: ", decoded);
+
+            //url = 'elastos://credaccess/' + jwt_token.decode()
             /*
             appManager.sendIntent("credaccess", {
                 claims: 

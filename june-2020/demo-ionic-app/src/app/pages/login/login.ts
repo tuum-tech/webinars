@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AppService } from '../../services/app.service'
 
@@ -14,11 +14,12 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController,
               public router: Router,
-              private appService: AppService) {
-    
+              private appService: AppService
+  ){
   }
 
   async doLogin(){
+    //this.navigate("www.google.com/");
     var loginResponse = await this.appService.tryDoLogin();
 
     if (loginResponse) this.router.navigate(['home'],{ replaceUrl: true });

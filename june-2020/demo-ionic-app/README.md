@@ -11,7 +11,9 @@ npm install
 ```
 - Run
 ```
-ionic capacitor run android --livereload --external
+ionic capacitor run android --livereload 
+// If you to access it from a different host other than localhost, add the flags 
+ionic capacitor run android --livereload --external --public-host 192.168.1.86
 ```
 
 ## If there are any changes to the code

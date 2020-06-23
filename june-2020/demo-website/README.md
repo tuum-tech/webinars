@@ -26,7 +26,6 @@ Set the following only if you want to test signup/login using Elephant Wallet. O
 ALLOWED_HOSTS=.127.0.0.1, .localhost, .192.168.1.23
 # Replace '192.168.1.23' with your own IP address(cannot be localhost)
 APP_URL=http://192.168.1.23:8000
-DEVELOPMENT=False
 ```
 Run the automated script to set up everything and start Django server:
 ```

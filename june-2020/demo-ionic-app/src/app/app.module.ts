@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { LoginPage } from './pages/login/login';
 import { HomePage } from './pages/home/home';
+import { WebIntent } from '@ionic-native/web-intent/ngx';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { HomePage } from './pages/home/home';
     SplashScreen,
     Platform,
     Native,
+    WebIntent,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: ErrorHandler, useClass: ErrorHandler}
   ]

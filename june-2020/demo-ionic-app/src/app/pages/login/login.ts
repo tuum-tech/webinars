@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone  } from '@angular/core';
 import { NavController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AppService } from '../../services/app.service'
@@ -13,16 +13,20 @@ export class LoginPage {
   page: number = 1;
 
   constructor(public navCtrl: NavController,
-              public router: Router,
+              public router: Router, public zone: NgZone,
               private appService: AppService
   ){
   }
 
   async doLogin(){
     //this.navigate("www.google.com/");
-    var loginResponse = await this.appService.tryDoLogin();
+   // var loginResponse = await this.appService.tryDoLogin();
 
-    if (loginResponse) this.router.navigate(['home'],{ replaceUrl: true });
+    this.zone.run(() => {
+      this.appService.login()
+    });
+
+    //if (loginResponse) this.router.navigate(['home'],{ replaceUrl: true });
   }
 
   ionViewDidEnter() {

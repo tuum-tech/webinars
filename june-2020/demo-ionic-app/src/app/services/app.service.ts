@@ -1,3 +1,4 @@
+import { WebIntent } from '@ionic-native/web-intent/ngx';
 import { Injectable } from "@angular/core";
 import { Native } from './Native';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
@@ -22,7 +23,7 @@ export class AppService {
     private isReceiveIntentReady = false;
 
 
-    constructor(public native: Native, private http: HttpClient, private localStorage : LocalStorageService, private platform: Platform, public router: Router) {
+    constructor(public native: Native, private http: HttpClient, private localStorage : LocalStorageService, private platform: Platform, public router: Router, private webIntent: WebIntent) {
         myService = this;
     }
 
@@ -34,7 +35,12 @@ export class AppService {
               // THIS WILL BE USED IF THE APP IS ALREADY OPEN:
               Plugins.App.addListener('appUrlOpen', (urlOpen: AppUrlOpen) => {
                 console.log('App URL Open', urlOpen);
-                this.navigate(urlOpen.url);
+               // this.navigate(urlOpen.url);
+              });
+
+              Plugins.App.addListener('appRestoredResult', (data: any) => {
+                console.log('App Restored Result', data);
+               // this.navigate(urlOpen.url);
               });
             }
       
@@ -59,33 +65,14 @@ export class AppService {
         this.router.navigateByUrl(uri);
     }
 
-    tryDoLogin(): Promise<boolean> {
-        var self = this;
+    login(){
 
-        return new Promise(async (resolve, reject) => {
-           
-            let profile =  await this.localStorage.getProfile();
-            console.log("profile: ", profile);
-            if (profile)
-            {
-                AppService.login = profile[0];
-                AppService.email = profile[1];
-                resolve(true);
-                return;
-            }
 
-            AppService.login = {
-                didString: "did-string",
-                name: "name-string"
-            }
-            AppService.email = "email-string";
-            this.localStorage.setProfile(AppService.login,  AppService.email);
-            
             //did:elastos:iWm3fwhsVbXJ1ecSi7n7Q9L6qNmH14FsuN
             // Create jwt token
             let jwt_claims = {
                 'exp': 300,
-                'redirecturl': "",
+                'redirecturl': 'ionic://tech.tuum.demoapp/',
                 'claims': {
                     'name': true,
                     'email': true
@@ -94,9 +81,83 @@ export class AppService {
             let jwt_token = jwt.sign(jwt_claims, "demo-ionic-app");
             console.log("jwt_token:", jwt_token);
             let urlToOpen = "elastos://credaccess/" + jwt_token;
-            this.navigate(urlToOpen);
-            let decoded = helper.decodeToken(jwt_token);
-            console.log("decoded: ", decoded);
+            // window.open(urlToOpen,"_system","location=yes");
+            
+            console.log("Test s")
+
+
+            const options = {
+                action: this.webIntent.ACTION_VIEW,
+                url: urlToOpen,
+                requestCode: 2
+              }
+              
+              this.webIntent.startActivityForResult(options).then(response =>{
+                console.log("intent response", response)
+              }).catch(err =>{
+                console.log("Intent error", err)
+              })
+
+    }
+
+    tryDoLogin(): Promise<boolean> {
+        var self = this;
+
+        return new Promise(async (resolve, reject) => {
+           
+            // let profile =  await this.localStorage.getProfile();
+            // console.log("profile: ", profile);
+            // if (profile)
+            // {
+            //     AppService.login = profile[0];
+            //     AppService.email = profile[1];
+            //     resolve(true);
+            //     return;
+            // }
+
+            // AppService.login = {
+            //     didString: "did-string",
+            //     name: "name-string"
+            // }
+            // AppService.email = "email-string";
+            // this.localStorage.setProfile(AppService.login,  AppService.email);
+            
+            console.log("uri", this.webIntent.getUri())
+
+
+            //did:elastos:iWm3fwhsVbXJ1ecSi7n7Q9L6qNmH14FsuN
+            // Create jwt token
+            let jwt_claims = {
+                'exp': 300,
+                'redirecturl': this.webIntent.getUri(),
+                'claims': {
+                    'name': true,
+                    'email': true
+                }
+            }
+            let jwt_token = jwt.sign(jwt_claims, "demo-ionic-app");
+            console.log("jwt_token:", jwt_token);
+            let urlToOpen = "elastos://credaccess/" + jwt_token;
+            // window.open(urlToOpen,"_system","location=yes");
+            
+            console.log("Test s")
+
+
+            const options = {
+                action: this.webIntent.ACTION_VIEW,
+                url: urlToOpen,
+                requestCode: 2
+              }
+              
+              this.webIntent.startActivityForResult(options).then(response =>{
+                console.log("intent response", response)
+              }).catch(err =>{
+                console.log("Intent error", err)
+              })
+
+            // this.navigate(urlToOpen);
+            // let decoded = helper.decodeToken(jwt_token);
+            // console.log("decoded: ", decoded);
 
             //url = 'elastos://credaccess/' + jwt_token.decode()
             /*

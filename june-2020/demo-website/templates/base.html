@@ -1,0 +1,107 @@
+{% load sass_tags %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Use jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"  crossorigin="anonymous"/>
+
+    <!-- Sass files -->
+    <link href="{% sass_src 'scss/sidebar.scss' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% sass_src 'scss/modal.scss' %}" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles-new.css' %}"/>
+
+    <!-- Title -->
+    {% block title %}{% endblock %}
+
+    <!-- Custom Javascript files -->
+    {% block scripts %}{% endblock %}
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg flex-column flex-md-row">
+            <a href="{% url 'landing' %}">
+                <img src="{% static 'images/common/icon.svg' %}" class="logo-converted"
+                     alt="Demo Website Logo"/>
+            </a>
+            {% if request.session.logged_in == True %}
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-oggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" style="padding-left: 1rem;">
+                </div>
+
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" id="accountDropdown"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                    <div class="dropdown-menu dropdown-menu-right others-submenu" aria-labelledby="accountDropdown">
+                        <a class="dropdown-item" href="{% url 'login:edit_profile' %}">Edit Profile</a>
+                        <a class="dropdown-item" href="{% url 'login:sign_out' %}">Log Out</a>
+                    </div>
+                </div>
+            {% endif %}
+        </nav>
+    </header>
+</head>
+<body>
+
+<!-- Body Content -->
+<div class="django_messages">
+    {% if messages %}
+        {% for message in messages %}
+            <p class="alert alert-info">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div class=container-fluid">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="text-center">
+        <p>
+            <a class="link" href="http://www.tuum.tech" target="_blank">Tuum.tech</a>
+        </p>
+        <p>
+            <span class="copyright">Copyright © 2020 Tuum Technologies. All Rights Reserved.</span>
+        </p>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+></script>
+<!-- Google Prettify for code syntax highlighting -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js??lang=python&lang=go;skin=desert"></script>
+</body>
+</html>

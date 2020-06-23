@@ -1,0 +1,611 @@
+ERROR 2020-06-23 15:55:16,261 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 71, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 15:55:16,262 django.server "GET /login/edit_profile HTTP/1.1" 500 103491
+ERROR 2020-06-23 15:55:17,311 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 71, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 15:55:17,312 django.server "GET /login/edit_profile HTTP/1.1" 500 103076
+ERROR 2020-06-23 15:56:18,592 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 71, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 15:56:18,592 django.server "GET /login/edit_profile HTTP/1.1" 500 103481
+ERROR 2020-06-23 15:56:19,630 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 71, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 15:56:19,631 django.server "GET /login/edit_profile HTTP/1.1" 500 103076
+ERROR 2020-06-23 17:01:10,770 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'feed' not found. 'feed' is not a valid view function or pattern name.
+ERROR 2020-06-23 17:01:10,773 django.server "GET / HTTP/1.1" 500 172587
+ERROR 2020-06-23 17:01:11,868 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'feed' not found. 'feed' is not a valid view function or pattern name.
+ERROR 2020-06-23 17:01:11,870 django.server "GET / HTTP/1.1" 500 172192
+ERROR 2020-06-23 17:18:45,373 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/urls/base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'console_main'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 60, in edit_profile
+    return redirect(reverse('console_main:landing'))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/urls/base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'console_main' is not a registered namespace
+ERROR 2020-06-23 17:18:45,373 django.server "POST /login/edit_profile HTTP/1.1" 500 94202
+ERROR 2020-06-23 17:26:19,654 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:26:19,656 django.server "GET / HTTP/1.1" 500 146085
+ERROR 2020-06-23 17:26:20,559 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:26:20,560 django.server "GET / HTTP/1.1" 500 145690
+ERROR 2020-06-23 17:27:42,699 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:27:42,701 django.server "GET / HTTP/1.1" 500 146070
+ERROR 2020-06-23 17:27:43,611 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:27:43,612 django.server "GET / HTTP/1.1" 500 145690
+ERROR 2020-06-23 17:28:23,115 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:28:23,118 django.server "GET / HTTP/1.1" 500 146084
+ERROR 2020-06-23 17:28:24,021 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:28:24,022 django.server "GET / HTTP/1.1" 500 145690
+ERROR 2020-06-23 17:29:39,550 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:29:39,551 django.server "GET / HTTP/1.1" 500 146085
+ERROR 2020-06-23 17:29:40,455 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 189, in landing
+    return render(request, 'landing.html', context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/templatetags/sass_tags.py", line 38, in render
+    path = self.sass_processor(self.sass_processor.resolve_path(context))
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/sass_processor/processor.py", line 78, in __call__
+    raise ImproperlyConfigured(msg.format(css_filename))
+django.core.exceptions.ImproperlyConfigured: Offline compiled file `scss/modal.css` is missing and libsass has not been installed.
+ERROR 2020-06-23 17:29:40,457 django.server "GET / HTTP/1.1" 500 145690
+ERROR 2020-06-23 17:32:39,918 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 67, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 17:32:39,919 django.server "GET /login/edit_profile HTTP/1.1" 500 103249
+ERROR 2020-06-23 17:32:40,553 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 67, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 17:32:40,555 django.server "GET /login/edit_profile HTTP/1.1" 500 102844
+ERROR 2020-06-23 17:32:55,511 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 67, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 17:32:55,512 django.server "GET /login/edit_profile HTTP/1.1" 500 103249
+ERROR 2020-06-23 17:32:56,045 django.request Internal Server Error: /login/edit_profile
+Traceback (most recent call last):
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/console_main/views.py", line 32, in wrapper
+    return function(request, *args, **kw)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/views.py", line 67, in edit_profile
+    form = DIDUserChangeForm(instance=request.user)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/login/forms.py", line 51, in __init__
+    super(DIDUserChangeForm, self).__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 150, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 292, in __init__
+    object_data = model_to_dict(instance, opts.fields, opts.exclude)
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/forms/models.py", line 82, in model_to_dict
+    opts = instance._meta
+  File "/home/kpachhai/repos/github.com/tuum-tech/webinars/june-2020/demo-website/venv/lib/python3.8/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute '_meta'
+ERROR 2020-06-23 17:32:56,047 django.server "GET /login/edit_profile HTTP/1.1" 500 102844

@@ -1,3 +1,6 @@
+## Demo
+[![Watch the demo](https://img.youtube.com/vi/kaRyQ1Df8dI/maxresdefault.jpg)](https://youtu.be/kaRyQ1Df8dI)
+
 ## Prerequisites
 
 Python3 and Django are required to run this build. First, install Python3:
